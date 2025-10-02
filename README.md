@@ -40,7 +40,7 @@ Sometimes you need input from the employee using the computer to proceed, for ex
 ## waitForUnlock
 Maybe you care about employee presence, but would prefer not to  exit if the employee isn’t there.  Pass a number in seconds to waitForUnlock to have your script wait to see if the computer unlocks while we’re waiting, proceeding normally if they return.. One strategy is to call `cleanupAndExit` if the wait for unlock time isn’t met.
 
-````
+```
 if ! waitForUnlock 600; then
     cleanupAndExit 1 "Waited 600 seconds for screen unlock and screen is still locked. The screen has been locked for $(beenLockedSince) seconds." WARN
 fi
