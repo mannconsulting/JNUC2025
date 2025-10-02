@@ -45,6 +45,7 @@ if ! waitForUnlock 600; then
     cleanupAndExit 1 "Waited 600 seconds for screen unlock and screen is still locked. The screen has been locked for $(beenLockedSince) seconds." WARN
 fi
 ```
+
 ## runAsUser
 Don’t run EVERYTHING as root, only what’s necessary.  Use this when you need to execute a user-impersonating command as root or if you’re opening an application that they will interact with to avoid potential privilege escalations. This works great with executing jamfHelper, Swift Dialog and other apps like defaults that interact with the employee or data in their home directory.
 
